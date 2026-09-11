@@ -1,0 +1,160 @@
+\documentclass[14pt]{extarticle}
+\usepackage[top=2.9cm, bottom=2.5cm, left=2.6cm, right=2.6cm, columnsep=0.65cm,
+            headheight=1.7cm, headsep=0.6cm]{geometry}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+
+% colors (tweak as you like)
+\definecolor{darkgreen}{RGB}{46,102,46}
+\definecolor{lightgreen}{RGB}{235,243,235}
+\definecolor{browntext}{RGB}{70,35,25}
+\definecolor{metablue}{HTML}{0082FB}
+\definecolor{shublue}{HTML}{00447D}
+
+% header: university logo (left), university name (right)
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[L]{\raisebox{1.5mm}{\includegraphics[height=1.3cm]{SHU_VI_LOGO.pdf}}}%
+  \fancyhead[R]{\raisebox{0.3cm}{\includegraphics[height=0.7cm]{Shanghai_University_title.png}}}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headruleskip}{-15pt}% pull the rule up to sit just below the images
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{shublue}\leaders\hrule height 0.8pt\hfill}}%
+}
+\pagestyle{plain}
+
+\newcommand{\blue}[1]{\textcolor{metablue}{#1}}
+
+% Define command: \reviewcomment{<title>}{<content>}
+\newcommand{\cmt}[2]{%
+  \begin{tcolorbox}[
+    colback=lightgreen,
+    colframe=darkgreen,
+    boxrule=0pt,
+    sharp corners,
+    title=#1,
+    colbacktitle=darkgreen,
+    coltitle=white,
+    fonttitle=\bfseries\large,
+    title filled,
+    halign title=flush left,
+    left=6mm,right=6mm,top=4mm,bottom=4mm
+  ]
+  {\color{browntext}#2}
+  \end{tcolorbox}%
+}
+
+
+\usepackage[font=itshape]{quoting}
+\quotingsetup{vskip=0pt}
+
+\usepackage{lipsum}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10pt}
+
+\linespread{1.2}
+
+\title{
+    A Template for
+    Response to Reviewers
+}
+
+
+\begin{document}
+\maketitle
+
+
+Dear Editor and Reviewers,
+
+
+Thanks for your constructive comments and giving us the opportunity
+to revise our manuscript (\textbf{Submission-ID}).
+
+Both reviewers acknowledged the novelty and significance of our work, while also offering valuable suggestions for improvement.
+%
+Most of their comments focused on 
+requests for additional experimental results 
+and analyses,
+as well as clarification of specific 
+sections of the manuscript.
+
+
+We have carefully addressed all comments and 
+suggestions and made corresponding revisions 
+to improve the manuscript.
+%
+All revisions in the manuscript are 
+\blue{highlighted in blue} for easy identification.
+
+
+In the rest of the letter, we address each reviewer's comments point-by-point.
+
+
+\vspace{3em}
+Best,
+
+First Name Last Name,
+
+Professor,
+
+School of Computer Science,
+
+University of X
+
+
+\clearpage
+\pagebreak
+
+\section*{Response to Reviewer 1}
+\cmt{R1 Comment1}{
+    \lipsum[1]
+}
+
+
+
+\lipsum[1]
+
+\cmt{R1 Comment2}{
+    \lipsum[1]
+}
+
+\lipsum[1]
+
+\begin{quoting}
+    \lipsum[1]
+\end{quoting}
+
+Thanks for the insightful suggestion.
+
+\lipsum[1]
+
+
+\clearpage\pagebreak
+\section*{Response to Reviewer 2}
+\cmt{R1 Comment1}{
+    \lipsum[1]
+}
+
+\lipsum[1]
+
+\cmt{R1 Comment2}{
+    \lipsum[1]
+}
+
+\lipsum[1]
+
+\begin{quoting}
+    \lipsum[1]
+\end{quoting}
+
+Thanks for the insightful suggestion.
+
+\lipsum[1]
+~\cite{krizhevsky2012imagenet}
+
+\bibliographystyle{IEEEtran}
+\bibliography{eg.bib}
+
+\end{document}

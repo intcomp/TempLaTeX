@@ -1,0 +1,72 @@
+\documentclass[11pt]{letter}
+\usepackage[a4paper,top=1.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{shublue}{HTML}{00447D}
+
+% letter.cls vertically centers the first page; start at the top instead
+\makeatletter
+\let\@texttop\relax
+\makeatother
+
+% ---------- Corresponding author ----------
+\newcommand{\corrname}{Prof.\ Author Name}
+\newcommand{\corrdept}{School of Example Science}
+\newcommand{\corraffil}{Shanghai University}
+\newcommand{\corraddr}{99 Shangda Road, Shanghai 200444, China}
+\newcommand{\corremail}{name@shu.edu.cn}
+\newcommand{\corrphone}{+86 21 0000 0000}
+
+% ---------- Letterhead ----------
+\newcommand{\letterhead}{%
+  \noindent
+  \begin{minipage}[c]{0.5\textwidth}
+    \includegraphics[height=2cm,valign=c]{SHU_VI_LOGO.pdf}\hspace{0.35cm}%
+    \includegraphics[height=1.1cm,valign=c]{Shanghai_University_title.png}%
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.48\textwidth}
+    \raggedleft\small
+    {\color{shublue}\bfseries\corrname}\\
+    \corrdept\\
+    \corraffil\\
+    \corraddr\\
+    Email: \href{mailto:\corremail}{\corremail}\\
+    Tel: \corrphone
+  \end{minipage}\par
+  \vspace{0.35cm}
+  {\color{shublue}\hrule height 1pt}
+  \vspace{0.8cm}
+}
+
+\begin{document}
+
+\begin{letter}{Editor-in-Chief\\Journal of Example Studies\\123 Academic Road\\Science City, SC 12345}
+
+\letterhead
+
+\opening{Dear Editor,}
+
+We are pleased to submit our manuscript
+entitled \textbf{``A Dummy Manuscript Title''} for consideration for publication in
+\textit{Journal of Example Studies}.
+
+This work presents a concise example of LaTeX cover letter formatting. We believe it will be of interest to researchers in scientific publishing and document preparation.
+
+The manuscript is original, has not been published, and is not under consideration elsewhere. All authors have approved the submission.
+
+Thank you for your consideration. We look forward to your response.
+
+\closing{Sincerely,}
+
+\corrname\\
+\corrdept\\
+\corraffil\\
+\corremail\\
+On behalf of all authors
+
+\end{letter}
+
+\end{document}
